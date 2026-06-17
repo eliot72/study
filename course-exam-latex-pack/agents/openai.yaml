@@ -1,0 +1,4 @@
+interface:
+  display_name: "Course Exam LaTeX Pack"
+  short_description: "Build three-part course exam PDF packs"
+  default_prompt: "Use $course-exam-latex-pack to turn my textbook and past exams into three LaTeX-compiled PDF handouts."

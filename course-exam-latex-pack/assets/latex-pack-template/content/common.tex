@@ -1,0 +1,70 @@
+\usepackage[UTF8]{ctex}
+\usepackage[a4paper,top=2.1cm,bottom=2.1cm,left=2.25cm,right=2.25cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{enumitem}
+\usepackage{booktabs,array,longtable,multicol}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{IdeaBlue}{RGB}{0,20,170}
+\definecolor{PitfallRed}{RGB}{205,0,0}
+\definecolor{BoxBack}{RGB}{248,248,255}
+\definecolor{PitfallBack}{RGB}{255,248,248}
+
+\hypersetup{colorlinks=true,linkcolor=IdeaBlue,urlcolor=IdeaBlue}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\linespread{1.08}
+\setlist[itemize]{leftmargin=2em,itemsep=0.15em,topsep=0.2em}
+\setlist[enumerate]{leftmargin=2.2em,itemsep=0.25em,topsep=0.2em}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\fancyhead[L]{\CourseTitle}
+\fancyhead[R]{\AuthorMark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newtcolorbox{ideabox}{
+  enhanced,
+  colback=BoxBack,
+  colframe=IdeaBlue,
+  coltitle=white,
+  colbacktitle=IdeaBlue,
+  title={【破题思路】},
+  fonttitle=\bfseries,
+  boxrule=0.8pt,
+  arc=2pt,
+  left=6pt,right=6pt,top=5pt,bottom=5pt
+}
+
+\newtcolorbox{pitfallbox}{
+  enhanced,
+  colback=PitfallBack,
+  colframe=PitfallRed,
+  coltitle=white,
+  colbacktitle=PitfallRed,
+  title={【避坑指南】},
+  fonttitle=\bfseries,
+  boxrule=0.8pt,
+  arc=2pt,
+  left=6pt,right=6pt,top=5pt,bottom=5pt
+}
+
+\newcommand{\source}[1]{\hfill{\bfseries [#1]}}
+\newcommand{\answerblank}{\underline{\hspace{4.5cm}}}
+\newcommand{\finalanswer}[1]{%
+  \begin{center}
+    \fbox{\begin{minipage}{0.82\linewidth}\centering #1\end{minipage}}
+  \end{center}
+}
+\newcommand{\docfrontmatter}[1]{
+  \begin{center}
+    {\LARGE\bfseries #1\par}
+  \end{center}
+  \tableofcontents
+  \newpage
+}
